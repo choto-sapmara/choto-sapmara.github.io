@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>57 No. Choto Sapmara Govt. Primary School</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  background: #fdfcf7; color: #1a1a1a; line-height: 1.6;
+}
+header {
+  background: white; border-bottom: 3px double #1a1a1a; padding: 0;
+  position: sticky; top: 0; z-index: 100;
+}
+.header-content {
+  max-width: 1300px; margin: 0 auto; display: flex;
+  justify-content: space-between; align-items: center; padding: 20px 40px;
+  flex-wrap: wrap; gap: 20px;
+}
+.logo-text {
+  font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: #1a1a1a;
+  font-style: italic; line-height: 1;
+}
+.logo-text small { display: block; font-family: 'Source Sans 3', sans-serif; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #666; font-weight: 400; font-style: normal; margin-top: 4px; }
+nav { display: flex; gap: 0; flex-wrap: wrap; }
+nav a {
+  color: #1a1a1a; text-decoration: none; font-size: 14px; font-weight: 600;
+  padding: 8px 18px; text-transform: uppercase; letter-spacing: 1.5px;
+  position: relative; transition: color .2s;
+}
+nav a::after {
+  content: ""; position: absolute; bottom: 0; left: 18px; right: 18px; height: 2px;
+  background: #1a1a1a; transform: scaleX(0); transition: transform .3s;
+}
+nav a:hover::after, nav a.active::after { transform: scaleX(1); }
+nav a.active { color: #000; }
+
+.hero { max-width: 1300px; margin: 40px auto; padding: 0 40px; }
+.hero-frame {
+  position: relative; aspect-ratio: 16/7; overflow: hidden;
+  border: 1px solid #1a1a1a;
+}
+.hero-image { width: 100%; height: 100%; object-fit: cover; filter: contrast(1.05); }
+.hero-headline {
+  position: absolute; bottom: 50px; left: 0; right: 0; text-align: center;
+  background: rgba(253, 252, 247, 0.92); padding: 24px 40px;
+  border-top: 3px double #1a1a1a; border-bottom: 3px double #1a1a1a;
+  margin: 0 80px;
+}
+.hero-headline h1 {
+  font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 700; font-style: italic;
+  letter-spacing: -0.5px; color: #1a1a1a;
+}
+
+.ticker-bar {
+  background: #1a1a1a; padding: 10px 0; overflow: hidden; margin-top: 40px;
+}
+.ticker-content {
+  display: inline-block; white-space: nowrap; color: white;
+  animation: ticker 30s linear infinite; font-size: 13px;
+  font-weight: 400; letter-spacing: 1.5px; text-transform: uppercase;
+  padding-left: 100%;
+}
+.ticker-content span { margin-right: 50px; }
+.ticker-content span::before { content: "★ "; color: #c9a96e; }
+@keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+
+main { max-width: 1300px; margin: 70px auto; padding: 0 40px; }
+.welcome-section {
+  display: grid; grid-template-columns: 1fr 2fr; gap: 50px; margin-bottom: 70px;
+  align-items: start;
+}
+.headmaster-card {
+  background: white; padding: 30px; text-align: center;
+  border: 1px solid #1a1a1a; position: relative;
+}
+.headmaster-card::before {
+  content: ""; position: absolute; top: 6px; left: 6px; right: 6px; bottom: 6px;
+  border: 1px solid #1a1a1a; pointer-events: none;
+}
+.headmaster-photo {
+  width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top;
+  margin-bottom: 16px; filter: grayscale(0.2);
+}
+.caption {
+  font-family: 'Playfair Display', serif; font-style: italic; font-size: 22px; color: #1a1a1a;
+  border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a;
+  padding: 10px 0; margin-bottom: 8px;
+}
+.name { color: #666; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; }
+.message-card { padding: 10px 0; }
+.message-card .eyebrow {
+  font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #999;
+  font-weight: 600; margin-bottom: 16px;
+}
+.message-card h2 {
+  font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 700;
+  font-style: italic; line-height: 1.15; color: #1a1a1a; margin-bottom: 24px;
+  letter-spacing: -0.8px;
+}
+.message-card p { line-height: 1.85; color: #333; font-size: 16px; max-width: 65ch; margin-bottom: 15px; }
+.message-card .signature {
+  font-family: 'Playfair Display', serif; font-style: italic; font-size: 18px;
+  color: #1a1a1a; margin-top: 20px;
+}
+.read-more {
+  display: inline-flex; align-items: center; gap: 10px; margin-top: 20px;
+  padding: 12px 28px; background: #1a1a1a; color: white; text-decoration: none;
+  font-weight: 600; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase;
+  transition: all .2s;
+}
+.read-more:hover { background: #c9a96e; }
+.read-more::after { content: "→"; }
+
+.info-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+.card {
+  background: white; padding: 35px; border: 1px solid #1a1a1a;
+  transition: all .3s; position: relative;
+}
+.card::before {
+  content: attr(data-num); position: absolute; top: 20px; right: 25px;
+  font-family: 'Playfair Display', serif; font-style: italic; font-size: 60px;
+  color: #f0ece0; line-height: 1; z-index: 0;
+}
+.card > * { position: relative; z-index: 1; }
+.card h3 {
+  font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; font-style: italic;
+  color: #1a1a1a; margin-bottom: 14px; letter-spacing: -0.5px;
+}
+.card p, .card li { line-height: 1.8; color: #555; font-size: 14px; }
+.card ul { list-style: none; }
+.card ul li { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px dashed #ddd; }
+.card ul li:last-child { border-bottom: none; }
+.card ul li a { color: #1a1a1a; text-decoration: none; font-weight: 600; transition: color .2s; }
+.card ul li a:hover { color: #c9a96e; }
+.card ul li a::before { content: "→ "; color: #c9a96e; }
+
+footer { background: white; color: #1a1a1a; margin-top: 70px; padding: 50px 40px 24px; border-top: 3px double #1a1a1a; }
+.footer-content {
+  max-width: 1300px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px;
+}
+.footer-section h4 {
+  font-family: 'Playfair Display', serif; font-style: italic; font-size: 20px;
+  margin-bottom: 20px; color: #1a1a1a;
+}
+.footer-section p, .footer-section a { color: #555; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px; transition: color .2s; }
+.footer-section a:hover { color: #c9a96e; }
+.footer-bottom {
+  max-width: 1300px; margin: 40px auto 0; padding-top: 20px;
+  border-top: 1px solid #1a1a1a; text-align: center; color: #666;
+  font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .welcome-section { grid-template-columns: 1fr; gap: 30px; }
+  .info-cards { grid-template-columns: 1fr; }
+  .footer-content { grid-template-columns: 1fr; gap: 30px; }
+  .header-content { flex-direction: column; align-items: flex-start; }
+  .hero-headline { margin: 0 20px; padding: 16px 20px; }
+  .hero-headline h1 { font-size: 22px; }
+  .message-card h2 { font-size: 26px; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-content">
+    <div class="logo-text">
+      The Choto Sapmara School
+      <small>57 No. Government Primary</small>
+    </div>
+    <nav>
+      <a href="#" class="active">Home</a>
+      <a href="#">About</a>
+      <a href="#">Teachers</a>
+      <a href="#">Students</a>
+      <a href="#">Facilities</a>
+      <a href="#">Academics</a>
+      <a href="#">Admission</a>
+      <a href="#">Gallery</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-frame">
+    <img src="../school.jpeg" alt="School" class="hero-image">
+    <div class="hero-headline">
+      <h1>"Education is the kindling of a flame, not the filling of a vessel."</h1>
+    </div>
+  </div>
+</section>
+
+<div class="ticker-bar">
+  <div class="ticker-content">
+    <span>Admission Open 2026-2027</span>
+    <span>Annual Sports Day — 15th June 2026</span>
+    <span>Science Fair 2026 — Register Now</span>
+    <span>Parent-Teacher Meeting — 20th June</span>
+    <span>New Library Books Available</span>
+  </div>
+</div>
+
+<main>
+  <section class="welcome-section">
+    <div class="headmaster-card">
+      <img src="../headmaster.jpeg" alt="Headmaster" class="headmaster-photo">
+      <p class="caption">Head Teacher</p>
+      <p class="name">Mohi Uddin Bhuiyan</p>
+    </div>
+    <div class="message-card">
+      <p class="eyebrow">A Word from Our Head Teacher</p>
+      <h2>Dear Students, Parents, and Friends,</h2>
+      <p>It is my privilege to welcome you to 57 No. Choto Sapmara Government Primary School, a place where the journey of learning begins with curiosity and wonder. For many of our students, these will be the most formative years of their lives, and we do not take that responsibility lightly.</p>
+      <p>Our promise is simple: every child who enters our school will be known, will be challenged, and will be cared for. We are deeply grateful to the families and community who entrust us with this most important work.</p>
+      <p class="signature">— Mohi Uddin Bhuiyan</p>
+      <a href="#" class="read-more">Continue reading</a>
+    </div>
+  </section>
+
+  <section class="info-cards">
+    <div class="card" data-num="I">
+      <h3>Our Vision</h3>
+      <p>To be a leading primary educational institution that empowers students with knowledge, skills, and values to become responsible global citizens.</p>
+    </div>
+    <div class="card" data-num="II">
+      <h3>Our Mission</h3>
+      <p>To provide holistic primary education that fosters academic excellence, critical thinking, and character development in a supportive learning environment.</p>
+    </div>
+    <div class="card" data-num="III">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Academic Calendar</a></li>
+        <li><a href="#">Admission Information</a></li>
+        <li><a href="#">Our Facilities</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4>57 No. Choto Sapmara<br>Government Primary School</h4>
+      <p>Choto Sapmara, Bangladesh</p>
+      <p>Phone: +8801673147369</p>
+      <p>Email: choto.sapmara@gmail.com</p>
+    </div>
+    <div class="footer-section">
+      <h4>Navigate</h4>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Admission</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="footer-section">
+      <h4>Connect</h4>
+      <a href="#">Facebook</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 · 57 No. Choto Sapmara Government Primary School</div>
+</footer>
+</body>
+</html>
