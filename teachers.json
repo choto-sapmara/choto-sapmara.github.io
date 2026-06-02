@@ -3,7 +3,7 @@
         "name": "Mohi Uddin Bhuiyan",
         "role": "Head Teacher",
         "photo": "./headmaster.jpeg",
-        "description": "36th BCS Non-cadre, MBA (AIS) Jagannath University, BTPT",
+        "description": "36th BCS Non-cadre, MBA (AIS), BTPT",
         "phone": "+8801673147369",
         "email": "mahee.096@gmail.com"
     },
@@ -19,17 +19,17 @@
         "name": "Rozina Akter",
         "role": "Assistant Teacher",
         "photo": "./rozinaAkter.png",
-        "description": "MSS, DPEd",
+        "description": "MA, DPEd",
         "phone": "+8801912712601",
-        "email": "choto.sapmara@gmail.com"
+        "email": "akterrozina70@gmail.com"
     },
     {
         "name": "Tania Sultana",
         "role": "Assistant Teacher",
         "photo": "./taniaSultana.png",
-        "description": "MSS",
+        "description": "MBS",
         "phone": "+8801916584566",
-        "email": "choto.sapmara@gmail.com"
+        "email": "mstaniasidacc@gmail.com"
     },
     {
         "name": "Sadia Akhter",
@@ -37,6 +37,6 @@
         "photo": "./sadiaAkhter.jpg",
         "description": "MSS",
         "phone": "+8801927297650",
-        "email": "choto.sapmara@gmail.com"
+        "email": "sadiashikha229@gmail.com"
     }
 ]

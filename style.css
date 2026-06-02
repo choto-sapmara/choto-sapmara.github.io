@@ -357,6 +357,50 @@ footer { background: #2d3a1f; color: #f5e6c8; margin-top: 60px; padding: 50px 30
 }
 .class-desc { color: #2d3a1f; font-size: 14px; font-style: italic; }
 
+.class-table-wrap {
+  overflow-x: auto; border: 1px solid #8b6f47;
+  background: white; box-shadow: 0 4px 20px rgba(45, 58, 31, 0.1);
+  position: relative;
+}
+.class-table-wrap::before {
+  content: ""; position: absolute; inset: 6px; border: 1px solid #d4af37;
+  pointer-events: none;
+}
+.class-table {
+  width: 100%; border-collapse: collapse; min-width: 560px;
+  font-family: 'Georgia', 'Noto Serif Bengali', serif;
+  position: relative; z-index: 1;
+}
+.class-table thead th {
+  background: #44487e; color: #f5e6c8;
+  font-weight: normal; font-style: italic;
+  padding: 16px 14px; text-align: left;
+  font-size: 14px; letter-spacing: 0.5px;
+  border-bottom: 2px solid #d4af37;
+  line-height: 1.5;
+}
+.class-table thead th .bn {
+  display: block; font-size: 12px; opacity: 0.85;
+  font-style: normal; font-weight: 400; margin-top: 2px;
+}
+.class-table tbody td {
+  padding: 14px; font-size: 15px; color: #2d3a1f;
+  border-bottom: 1px solid #e8dcc0; line-height: 1.6;
+  font-style: italic;
+}
+.class-table tbody tr:nth-child(even) { background: #faf6ec; }
+.class-table tbody tr:nth-child(odd) { background: #ffffff; }
+.class-table tbody tr:hover { background: #f0e9d2; }
+.class-table tbody tr:last-child td { border-bottom: none; }
+.class-table tbody td:first-child {
+  color: #4a6b3a; font-weight: bold; border-right: 1px solid #e8dcc0;
+}
+.class-table tbody td:not(:first-child) { text-align: center; }
+.class-table tbody td .bn {
+  display: block; font-size: 12px; color: #8b6f47;
+  font-style: normal; font-weight: 400; margin-top: 2px;
+}
+
 .activities-grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
 }
@@ -439,4 +483,6 @@ footer { background: #2d3a1f; color: #f5e6c8; margin-top: 60px; padding: 50px 30
   .header-content { padding: 0 16px; gap: 12px; }
   .logo-text { font-size: 17px; }
   nav a { padding: 5px 8px; font-size: 12px; }
+  .class-table thead th { padding: 10px 8px; font-size: 12px; }
+  .class-table tbody td { padding: 10px 8px; font-size: 13px; }
 }
