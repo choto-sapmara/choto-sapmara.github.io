@@ -26,7 +26,7 @@ header {
 .header-content.wrapped > nav { flex-basis: 100%; justify-content: center; flex-wrap: wrap; }
 .logo { display: flex; align-items: center; }
 .logo-text {
-  color: #f5e6c8; font-size: 28px; font-weight: normal; font-style: italic;
+  color: #f5e6c8; font-size: 20px; font-weight: normal; font-style: italic;
   letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 12px;
 }
 .logo-text::before { content: "🌿"; color: #d4af37; font-size: 24px; font-style: normal; }
@@ -374,7 +374,7 @@ footer { background: #2d3a1f; color: #f5e6c8; margin-top: 60px; padding: 50px 30
 .class-table thead th {
   background: #44487e; color: #f5e6c8;
   font-weight: normal; font-style: italic;
-  padding: 16px 14px; text-align: left;
+  padding: 16px 14px; text-align: center;
   font-size: 14px; letter-spacing: 0.5px;
   border-bottom: 2px solid #d4af37;
   line-height: 1.5;
@@ -466,7 +466,7 @@ footer { background: #2d3a1f; color: #f5e6c8; margin-top: 60px; padding: 50px 30
   .welcome-section { grid-template-columns: 1fr; }
   .info-cards { grid-template-columns: 1fr; }
   .footer-content { grid-template-columns: 1fr; }
-  .logo-text { font-size: 20px; }
+  .logo-text { font-size: 17px; }
   nav a { padding: 6px 10px; font-size: 13px; }
   .hero-caption h1 { font-size: 28px; }
   .hero-caption { left: 24px; right: 24px; bottom: 24px; }
@@ -481,7 +481,7 @@ footer { background: #2d3a1f; color: #f5e6c8; margin-top: 60px; padding: 50px 30
 
 @media (max-width: 600px) {
   .header-content { padding: 0 16px; gap: 12px; }
-  .logo-text { font-size: 17px; }
+  .logo-text { font-size: 14px; }
   nav a { padding: 5px 8px; font-size: 12px; }
   .class-table thead th { padding: 10px 8px; font-size: 12px; }
   .class-table tbody td { padding: 10px 8px; font-size: 13px; }
