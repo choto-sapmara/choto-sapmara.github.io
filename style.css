@@ -430,7 +430,10 @@ footer {
     line-height: 1.5;
     text-align: center;
     font-weight: 500;
-    white-space: pre-line;
+}
+
+.gallery-caption p {
+    margin: 0;
 }
 
 .contact-grid {
@@ -568,7 +571,14 @@ footer {
     font-size: 14px;
     line-height: 1.7;
     margin-bottom: 6px;
-    white-space: pre-line;
+}
+
+.tv-desc p {
+    margin-bottom: 4px;
+}
+
+.tv-desc p:last-child {
+    margin-bottom: 0;
 }
 
 .tv-actions {
