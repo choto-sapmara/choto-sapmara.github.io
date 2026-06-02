@@ -30,23 +30,35 @@ function loadTicker() {
     fetch('./ticker.json')
         .then(function(r) { return r.json(); })
         .then(function(data) {
+            if (!data.items) return;
+
             var tickers = document.querySelectorAll('.ticker-content');
-            if (!tickers.length || !data.items) return;
-            var html = data.items.map(function(item) {
-                return '<span>' + item + '</span>';
-            }).join('');
-            tickers.forEach(function(t) {
-                if (t.dataset.filled === 'true') return;
-                t.innerHTML = html;
-                t.dataset.filled = 'true';
-            });
-            tickers.forEach(function(t) {
-                if (t.dataset.cloned === 'true') return;
-                var clone = t.cloneNode(true);
-                clone.setAttribute('aria-hidden', 'true');
-                t.parentNode.appendChild(clone);
-                t.dataset.cloned = 'true';
-            });
+            if (tickers.length) {
+                var html = data.items.map(function(item) {
+                    return '<span>' + item + '</span>';
+                }).join('');
+                tickers.forEach(function(t) {
+                    if (t.dataset.filled === 'true') return;
+                    t.innerHTML = html;
+                    t.dataset.filled = 'true';
+                });
+                tickers.forEach(function(t) {
+                    if (t.dataset.cloned === 'true') return;
+                    var clone = t.cloneNode(true);
+                    clone.setAttribute('aria-hidden', 'true');
+                    t.parentNode.appendChild(clone);
+                    t.dataset.cloned = 'true';
+                });
+            }
+
+            var noticeList = document.getElementById('notice-board-list');
+            if (noticeList) {
+                data.items.forEach(function(item) {
+                    var li = document.createElement('li');
+                    li.textContent = item;
+                    noticeList.appendChild(li);
+                });
+            }
         })
         .catch(function() {});
 }
