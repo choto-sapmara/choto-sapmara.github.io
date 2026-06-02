@@ -33,41 +33,44 @@
     </div>
 
     <main class="page-content">
-        <h1>Get in Touch</h1>
+        <h1>Get in Touch<br><span class="bn">যোগাযোগ করুন</span></h1>
         <div class="breadcrumb"><a href="index.html">Home</a> / Contact</div>
 
         <div class="contact-grid">
             <div class="contact-info-card">
-                <h2>Contact Information</h2>
+                <h2>Contact Information<br><span class="bn">যোগাযোগের তথ্য</span></h2>
                 <div class="contact-detail">
-                    <strong>Address</strong>
-                    <p>Choto Sapmara, Meghna, Cumilla, Bangladesh</p>
+                    <strong>Address<br><span class="bn">ঠিকানা</span></strong>
+                    <p>Choto Sapmara, Meghna, Cumilla, Bangladesh<br>
+                    <span class="bn">ছোট সাপমারা, মেঘনা, কুমিল্লা, বাংলাদেশ</span></p>
                 </div>
                 <div class="contact-detail">
-                    <strong>Phone</strong>
+                    <strong>Phone<br><span class="bn">ফোন</span></strong>
                     <p><a href="tel:+8801673147369">+8801673147369</a></p>
                 </div>
                 <div class="contact-detail">
-                    <strong>Email</strong>
+                    <strong>Email<br><span class="bn">ইমেইল</span></strong>
                     <p><a href="mailto:choto.sapmara@gmail.com">choto.sapmara@gmail.com</a></p>
                 </div>
                 <div class="contact-detail">
-                    <strong>Office Hours</strong>
-                    <p>Sunday to Thursday: 9:00 AM to 4:15 PM<br>Friday & Saturday: Closed</p>
+                    <strong>Office Hours<br><span class="bn">কার্যালয়ের সময়</span></strong>
+                    <p>Sunday to Thursday: 9:00 AM to 4:15 PM<br><span class="bn">রবিবার থেকে বৃহস্পতিবার: সকাল ৯:০০ থেকে বিকাল ৪:১৫</span><br>
+                    Friday & Saturday: Closed<br><span class="bn">শুক্র ও শনিবার: বন্ধ</span></p>
                 </div>
                 <div class="contact-detail">
-                    <strong>Head Teacher</strong>
-                    <p>Mohi Uddin Bhuiyan</p>
+                    <strong>Head Teacher<br><span class="bn">প্রধান শিক্ষক</span></strong>
+                    <p>Mohi Uddin Bhuiyan<br>
+                    <span class="bn">মহি উদ্দিন ভূঁইয়া</span></p>
                 </div>
             </div>
             <div class="contact-form-card">
-                <h2>Send Us a Message</h2>
-                <form onsubmit="event.preventDefault(); alert('Thank you. We will be in touch shortly.');">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <input type="text" placeholder="Subject">
-                    <textarea rows="6" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
+                <h2>Send Us a Message<br><span class="bn">আমাদের একটি বার্তা পাঠান</span></h2>
+                <form id="contact-form" action="mailto:choto.sapmara@gmail.com" method="post" enctype="text/plain">
+                    <input type="text" name="name" placeholder="Your Name / আপনার নাম" required>
+                    <input type="email" name="email" placeholder="Your Email / আপনার ইমেইল" required>
+                    <input type="text" name="subject" placeholder="Subject / বিষয়">
+                    <textarea name="message" rows="6" placeholder="Your Message / আপনার বার্তা" required></textarea>
+                    <button type="submit">Send Message<br><span class="bn">বার্তা পাঠান</span></button>
                 </form>
             </div>
         </div>
@@ -76,25 +79,46 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h4>Visit Us</h4>
+                <h4>Visit Us<br><span class="bn">আমাদের দেখুন</span></h4>
                 <p>Choto Sapmara, Meghna, Cumilla, Bangladesh</p>
                 <p>Phone: +8801673147369</p>
                 <p>Email: choto.sapmara@gmail.com</p>
             </div>
             <div class="footer-section">
-                <h4>Explore</h4>
+                <h4>Explore<br><span class="bn">অন্বেষণ</span></h4>
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="admission.html">Admission</a>
                 <a href="contact.html">Contact</a>
             </div>
             <div class="footer-section">
-                <h4>Connect</h4>
+                <h4>Connect<br><span class="bn">সংযুক্ত হোন</span></h4>
                 <a href="https://www.facebook.com/profile.php?id=61590702804789" target="_blank" rel="noopener">Facebook</a>
             </div>
         </div>
         <div class="footer-bottom">© 2026 57 No. Choto Sapmara Government Primary School. All rights reserved.</div>
     </footer>
     <script src="script.js"></script>
+    <script>
+        (function() {
+            var form = document.getElementById('contact-form');
+            if (!form) return;
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                var name = form.name.value.trim();
+                var email = form.email.value.trim();
+                var subject = form.subject.value.trim();
+                var message = form.message.value.trim();
+                var subjLine = subject || 'Message from school website';
+                var body = 'Name: ' + name + '\n' +
+                           'Email: ' + email + '\n\n' +
+                           message;
+                var mailto = 'mailto:choto.sapmara@gmail.com' +
+                             '?subject=' + encodeURIComponent(subjLine) +
+                             '&body=' + encodeURIComponent(body);
+                window.location.href = mailto;
+            });
+        })();
+    </script>
 </body>
 </html>

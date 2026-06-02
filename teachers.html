@@ -33,7 +33,7 @@
     </div>
 
     <main class="page-content">
-        <h1>Our Teachers</h1>
+        <h1>Our Teachers<br><span class="bn">আমাদের শিক্ষকমণ্ডলী</span></h1>
         <div class="breadcrumb"><a href="index.html">Home</a> / Teachers</div>
 
         <div id="teachers-container" class="teachers-vertical-grid"></div>
@@ -42,20 +42,20 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h4>Visit Us</h4>
+                <h4>Visit Us<br><span class="bn">আমাদের দেখুন</span></h4>
                 <p>Choto Sapmara, Meghna, Cumilla, Bangladesh</p>
                 <p>Phone: +8801673147369</p>
                 <p>Email: choto.sapmara@gmail.com</p>
             </div>
             <div class="footer-section">
-                <h4>Explore</h4>
+                <h4>Explore<br><span class="bn">অন্বেষণ</span></h4>
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="admission.html">Admission</a>
                 <a href="contact.html">Contact</a>
             </div>
             <div class="footer-section">
-                <h4>Connect</h4>
+                <h4>Connect<br><span class="bn">সংযুক্ত হোন</span></h4>
                 <a href="https://www.facebook.com/profile.php?id=61590702804789" target="_blank" rel="noopener">Facebook</a>
             </div>
         </div>
@@ -108,14 +108,14 @@
                         var ph = document.createElement('a');
                         ph.href = 'tel:' + t.phone;
                         ph.className = 'tv-btn tv-btn-phone';
-                        ph.textContent = 'Phone';
+                        ph.innerHTML = 'Phone <span class="bn">ফোন</span>';
                         actions.appendChild(ph);
                     }
                     if (t.email) {
                         var em = document.createElement('a');
                         em.href = 'mailto:' + t.email;
                         em.className = 'tv-btn tv-btn-email';
-                        em.textContent = 'Email';
+                        em.innerHTML = 'Email <span class="bn">ইমেইল</span>';
                         actions.appendChild(em);
                     }
                     card.appendChild(actions);
