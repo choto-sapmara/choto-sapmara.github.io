@@ -3,15 +3,15 @@
         "name": "Mohi Uddin Bhuiyan",
         "role": "Head Teacher",
         "photo": "./headmaster.jpeg",
-        "description": "36th BCS Non-cadre.\n  MBA (AIS) Jagannath University",
+        "description": "36th BCS Non-cadre, MBA (AIS) Jagannath University, BTPT",
         "phone": "+8801673147369",
-        "email": "choto.sapmara@gmail.com"
+        "email": "mahee.096@gmail.com"
     },
     {
         "name": "Sharmin Akhter",
         "role": "Assistant Teacher",
         "photo": "./sharminAkhter.png",
-        "description": "BSS",
+        "description": "BSS, B.Ed.",
         "phone": "+8801715791258",
         "email": "choto.sapmara@gmail.com"
     },
@@ -19,24 +19,24 @@
         "name": "Rozina Akter",
         "role": "Assistant Teacher",
         "photo": "./rozinaAkter.png",
-        "description": "BSS",
-        "phone": "+8801715791258",
+        "description": "MSS, B.Ed.",
+        "phone": "+8801912712601",
         "email": "choto.sapmara@gmail.com"
     },
     {
         "name": "Tania Sultana",
         "role": "Assistant Teacher",
         "photo": "./taniaSultana.png",
-        "description": "",
-        "phone": "+8801715791258",
+        "description": "MSS",
+        "phone": "+8801916584566",
         "email": "choto.sapmara@gmail.com"
     },
     {
         "name": "Sadia Akhter",
         "role": "Assistant Teacher",
         "photo": "./sadiaAkhter.jpg",
-        "description": "",
-        "phone": "+8801715791258",
+        "description": "MSS",
+        "phone": "+8801927297650",
         "email": "choto.sapmara@gmail.com"
     }
 ]

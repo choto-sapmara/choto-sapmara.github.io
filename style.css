@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600&display=swap');
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-  font-family: 'Georgia', 'Times New Roman', serif;
+  font-family: 'Georgia', 'Times New Roman', 'Noto Serif Bengali', serif;
   background: #f5f1e8; color: #2d3a1f;
+}
+.bn {
+  font-family: 'Noto Serif Bengali', 'Georgia', serif;
+  font-weight: 500;
 }
 
 header {
@@ -12,11 +18,16 @@ header {
 .header-content {
   max-width: 1400px; margin: 0 auto; display: flex;
   justify-content: space-between; align-items: center; padding: 0 30px;
-  gap: 20px;
+  gap: 20px; flex-wrap: wrap;
 }
+.header-content > .logo,
+.header-content > nav { min-width: 0; }
+.header-content.wrapped > .logo { flex-basis: 100%; text-align: center; justify-content: center; }
+.header-content.wrapped > nav { flex-basis: 100%; justify-content: center; flex-wrap: wrap; }
+.logo { display: flex; align-items: center; }
 .logo-text {
   color: #f5e6c8; font-size: 28px; font-weight: normal; font-style: italic;
-  letter-spacing: 0.5px; display: flex; align-items: center; gap: 12px;
+  letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 12px;
 }
 .logo-text::before { content: "🌿"; color: #d4af37; font-size: 24px; font-style: normal; }
 nav { display: flex; gap: 4px; }
@@ -36,7 +47,7 @@ nav a.active::after {
   max-width: 1300px; margin: 30px auto; padding: 0 30px;
 }
 .hero-frame {
-  position: relative; height: 480px; overflow: hidden;
+  position: relative; height: 600px; overflow: hidden;
   border: 1px solid #8b6f47;
   box-shadow: 0 8px 32px rgba(45, 58, 31, 0.2);
 }
@@ -411,7 +422,7 @@ footer { background: #2d3a1f; color: #f5e6c8; margin-top: 60px; padding: 50px 30
   .welcome-section { grid-template-columns: 1fr; }
   .info-cards { grid-template-columns: 1fr; }
   .footer-content { grid-template-columns: 1fr; }
-  .logo-text { font-size: 18px; }
+  .logo-text { font-size: 20px; }
   nav a { padding: 6px 10px; font-size: 13px; }
   .hero-caption h1 { font-size: 28px; }
   .hero-caption { left: 24px; right: 24px; bottom: 24px; }
@@ -422,4 +433,10 @@ footer { background: #2d3a1f; color: #f5e6c8; margin-top: 60px; padding: 50px 30
   .teachers-vertical-grid { grid-template-columns: 1fr; }
   .activities-grid { grid-template-columns: 1fr; }
   .page-content > h1 { font-size: 30px; }
+}
+
+@media (max-width: 600px) {
+  .header-content { padding: 0 16px; gap: 12px; }
+  .logo-text { font-size: 17px; }
+  nav a { padding: 5px 8px; font-size: 12px; }
 }

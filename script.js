@@ -3,7 +3,28 @@ document.addEventListener('DOMContentLoaded', function() {
     initHeroSlideshow();
     initCardAnimations();
     highlightActiveNav();
+    setupHeaderWrap();
 });
+
+function setupHeaderWrap() {
+    var header = document.querySelector('.header-content');
+    if (!header) return;
+    var logo = header.querySelector('.logo');
+    var nav = header.querySelector('nav');
+    if (!logo || !nav) return;
+
+    function check() {
+        var logoRect = logo.getBoundingClientRect();
+        var navRect = nav.getBoundingClientRect();
+        if (navRect.top > logoRect.bottom - 1) {
+            header.classList.add('wrapped');
+        } else {
+            header.classList.remove('wrapped');
+        }
+    }
+    check();
+    window.addEventListener('resize', check);
+}
 
 function loadTicker() {
     fetch('./ticker.json')
