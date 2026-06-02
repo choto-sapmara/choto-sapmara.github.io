@@ -79,12 +79,10 @@
                     var name = document.createElement('h3');
                     name.className = 'tv-name';
                     name.textContent = t.name;
-                    card.appendChild(name);
 
                     var role = document.createElement('p');
                     role.className = 'tv-role';
                     role.textContent = t.role;
-                    card.appendChild(role);
 
                     var img = document.createElement('img');
                     img.src = t.photo;
@@ -92,6 +90,8 @@
                     img.className = 'tv-photo';
                     card.appendChild(img);
 
+                    card.appendChild(name);
+                    card.appendChild(role);
                     var desc = document.createElement('div');
                     desc.className = 'tv-desc';
                     if (t.description) {
